@@ -13,19 +13,34 @@ function positive(number) {
 }
 
 function isOdd(number) {
-    // Implementar
+    const n = R.clone(number);
+    n.odd = n.value % 2;
+    return n;
 }
 
 function negative(number) {
-    // Implementar
+    const n = R.clone(number);
+    n.negative = n.value < 0;
+    return n;
 }
 
 function isZero(number) {
-    // Implementar
+    const n = R.clone(number);
+    n.zero = n.value == 0;
+    return n;
 }
 
 function isPrime(number) {
-    // Implementar
+    const n = R.clone(number);
+    let qtdDividers = 0;
+
+    for(i = 0; i <= Math.sqrt(n.value); i++){
+        if(n.value % i == 0){
+            qtdDividers++
+        }
+    }
+    n.prime = qtdDividers == 1;
+    return n;
 }
 
 function mapToNumberObject(num) {
