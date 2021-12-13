@@ -1,0 +1,9 @@
+{
+  "name": "atividade-9",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "ramda": "^0.27.1"
+  }
+}
