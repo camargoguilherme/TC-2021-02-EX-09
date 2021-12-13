@@ -14,7 +14,7 @@ const positive = (number) => {
 
 const isOdd = (number) => {
     const n = R.clone(number);
-    n.odd = n.value % 2;
+    n.odd = n.value % 2 ? true : false;
     return n;
 }
 
@@ -62,3 +62,5 @@ console.log(arrObjects)
 const objTest = constructObject({value: 1});
 console.log(objTest)
 // Exercício 5: use a função composta do Ex. 4 para transformar os números em 'arr'
+const arrObjects2 = arr.map(mapToNumberObject).map(constructObject);
+console.log(arrObjects2)
