@@ -45,6 +45,8 @@ const isPrime = (number) => {
 
 const mapToNumberObject = (num) => ({ value: num })
 
+const constructObject = R.pipe(isEven, positive, isOdd, negative, isZero, isPrime);
+
 const arr = [-1, 50, 5, 10, -8, 20, 25, 0, 100, 14, -123];
 
 // Exercício 1: use map() para transformar 'arr' em objetos usando mapToNumberObject()
@@ -57,5 +59,6 @@ console.log(arrObjects)
 
 // Exercício 4: use R.pipe para compor as funções: isEven, positive, isOdd, negative, 
     // isZero, e isPrime. Teste a função composta com um único objeto.
-
+const objTest = constructObject({value: 1});
+console.log(objTest)
 // Exercício 5: use a função composta do Ex. 4 para transformar os números em 'arr'
